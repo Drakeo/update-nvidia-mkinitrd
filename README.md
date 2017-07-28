@@ -1,6 +1,6 @@
 # update-nvidia-mkinitrd
 ~~~
-Place the update-nvidia-mkinitrd 
+Place the update-nvidia-mkinitrd.sh 
 /usr/local/bin or where you like. 
 As root in runlevel 3 or init 3
 type update-nvidia-mkinitrd.sh
