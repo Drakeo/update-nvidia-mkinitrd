@@ -70,7 +70,7 @@ rm kernelv.txt
 sh $RUNNV --uninstall
 
 #install NVIDIA kernel version for kernel upgrades
-sh $RUNNV -k $KERNV $KERNH
+sh $RUNNV -k $KERNV$KERNH
 
 # ...
 function pause(){
