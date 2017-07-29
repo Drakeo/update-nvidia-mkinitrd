@@ -90,8 +90,8 @@ mount|grep ' / '|cut -d' ' -f 1 >> drive.txt
 
 DRIVE=$(sed "s/\(.\{9\}\).\{6\}//" "${DRTXT}")
 rm  $DRTXT
-echo -e "\e[1;33m mkinitrd -c -k $KERNV -f $EXT -r $DRIVE -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:$EXT  -u -o /boot/initrd.gz \e[0m" 
+echo -e "\e[1;33m mkinitrd -c -k $KERNV$KERNH -f $EXT -r $DRIVE -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:$EXT  -u -o /boot/initrd.gz \e[0m" 
 echo -e "\e[1;33m wait 15 seconds so you can make sure the drive and ext is right hit ctrl c if not \e[0m"
 sleep 15
-mkinitrd -c -k $KERNV -f $EXT -r $DRIVE -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:$EXT  -u -o /boot/initrd.gz
+mkinitrd -c -k $KERNV$KERNH -f $EXT -r $DRIVE -m xhci-pci:ohci-pci:ehci-pci:xhci-hcd:uhci-hcd:ehci-hcd:hid:usbhid:i2c-hid:hid_generic:hid-cherry:hid-logitech:hid-logitech-dj:hid-logitech-hidpp:hid-lenovo:hid-microsoft:hid_multitouch:jbd2:mbcache:$EXT  -u -o /boot/initrd.gz
 #clean up 
