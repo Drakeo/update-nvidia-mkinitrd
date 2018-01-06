@@ -43,7 +43,7 @@ wget  https://download.nvidia.com/XFree86/$SLKCA/$filename
 #edit for my system
 EXT=ext4
 GETNV=$(sed "s/\(.\{8\}\).\{0\}//" "${filename}")
-RUNNV=$(sed "s/\(.\{14\}\).\{0\}//" "${filename}")
+RUNNV=$(sed "s/\(.\{16\}\).\{0\}//" "${filename}")
 
 echo down loading $RUNNV
 wget -c  https://download.nvidia.com/XFree86/$SLKCA/$GETNV
