@@ -33,9 +33,10 @@ elif [ "$ARCH" = "x86_64" ]; then
 else
    SLKCA="Linux-x86_64"
 fi
-#cd usr/local/bin/update-nvidia-mkinitrd
+
+cd /usr/share/update-nvidia-mkinitrd
 echo check for updates
-#git pull
+git pull
 
 cd /root
 
