@@ -21,8 +21,8 @@
 # WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-PRGNAM=update-nvidia-mkinitrd.sh
-VERSION=${VERSION:-0.1}
+PRGNAM=update-nvidia-mkinitrd
+VERSION=${VERSION:-0.2}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -63,8 +63,12 @@ cp -a  README.md  \
     $PKG/usr/doc/$PRGNAM-$VERSION
 find $PKG/usr/doc/$PRGNAM-$VERSION -type f -exec chmod 644 {} \;
 cat $CWD/$PRGNAM.SlackBuild > $PKG/usr/doc/$PRGNAM-$VERSION/$PRGNAM.SlackBuild
-
-ln -s $PKG/usr/share/$PRGNAM/$PRGNAM $PKG/usr/local/bin/$PRGNAM
+cd $PKG/usr/local/bin/
+cat > update-nvidia-mkinitrd <<EOF
+#!/bin/bash
+sh /usr/share/update-nvidia-mkinitrd/update-nvidia-mkinitrd.sh
+EOF
+#ln -s $PKG/usr/share/$PRGNAM/$PRGNAM $PKG/usr/local/bin/$PRGNAM
 cd $CWD
 mkdir -p $PKG/install
 cat > slack-desc <<EOF
