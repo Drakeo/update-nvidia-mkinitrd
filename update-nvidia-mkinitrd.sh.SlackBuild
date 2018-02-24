@@ -22,7 +22,7 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 PRGNAM=update-nvidia-mkinitrd
-VERSION=${VERSION:-0.3}
+VERSION=${VERSION:-0.5}
 BUILD=${BUILD:-1}
 TAG=${TAG:-_SBo}
 
@@ -55,7 +55,7 @@ fi
 rm -rf $PKG
 mkdir -p $PKG/usr/share/$PRGNAM
 mkdir -p $PKG/usr/local/bin
-cp $CWD/$PRGNAM  $PKG/usr/share/$PRGNAM
+cp $CWD/$PRGNAM  $PKG/usr/share/$PRGNAM.sh
 cp -rf $CWD/.git  $PKG/usr/share/$PRGNAM
 cp -rf $CWD/.gitignore  $PKG/usr/share/$PRGNAM
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
