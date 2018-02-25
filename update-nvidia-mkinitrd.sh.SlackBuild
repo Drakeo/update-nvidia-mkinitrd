@@ -55,7 +55,7 @@ fi
 rm -rf $PKG
 mkdir -p $PKG/usr/share/$PRGNAM
 mkdir -p $PKG/usr/local/bin
-cp $CWD/$PRGNAM  $PKG/usr/share/$PRGNAM.sh
+cp $CWD/$PRGNAM.sh  $PKG/usr/share/$PRGNAM
 cp -rf $CWD/.git  $PKG/usr/share/$PRGNAM
 cp -rf $CWD/.gitignore  $PKG/usr/share/$PRGNAM
 mkdir -p $PKG/usr/doc/$PRGNAM-$VERSION
