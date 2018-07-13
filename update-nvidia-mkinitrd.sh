@@ -34,8 +34,8 @@ else
    SLKCA="Linux-x86_64"
 fi
 
-#cd /usr/share/update-nvidia-mkinitrd.sh
-echo check for updates
+cd /usr/share/update-nvidia-mkinitrd
+echo "check for updates"
 git pull
 
 cd /root
