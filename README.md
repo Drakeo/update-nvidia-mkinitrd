@@ -1,17 +1,11 @@
 # update-nvidia-mkinitrd
 ~~~
-Place the update-nvidia-mkinitrd.sh 
-/usr/local/bin or where you like. 
-As root in runlevel 3 or init 3
-type update-nvidia-mkinitrd.sh
-use this to upgrade the nvidia driver after a kernel upgrade
-will also build the initrd image of the new installed kernel.
+Buld the package and install
 ~~~
 
 # edit your partition file extention 
 ~~~
-#edit for my system
-EXT=ext4 #to what your drive is formated to. 
+automaticall finds your file table extention 
 ~~~
 
 # Not for legacy drivers
@@ -32,6 +26,8 @@ and build the initrd.gz for your drive.
 # Note on the mkinitrd
 
 ~~~
+reads the  the new kernel config in /boot 
+then builds nvidia module and initrd.img for that version
 you can edit it to your system use
 Alien bob's /usr/share/mkinitrd/mkinitrd_command_generator.sh
 then edit your system. As you may want.
